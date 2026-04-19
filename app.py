@@ -248,7 +248,7 @@ def fetch_movie_details(movie_id):
 
     api_key = os.getenv("API_KEY")
     response = requests.get(
-        f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=4{api_key}'
+        f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}'
     )
     data = response.json()
     poster     = "https://image.tmdb.org/t/p/w500/" + data.get('poster_path', '')
